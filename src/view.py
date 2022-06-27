@@ -1,23 +1,21 @@
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
-
-""" View. """
-
-
 from view_qt import Ui_MainWindow
 from PyQt5 import QtWidgets as qtw
+from PyQt5 import QtCore as qtc
 
 
 class View(qtw.QWidget):
 
-    def __int__(self, *args, **kwargs):
-        super(View, self).__int__(*args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+
+if __name__ == "__main__":
+    app = qtw.QApplication([])
+
+    widget = View()
+    widget.show()
+
+    app.exec_()
