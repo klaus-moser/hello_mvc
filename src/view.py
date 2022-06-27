@@ -1,6 +1,5 @@
 from view_qt import Ui_MainWindow
 from PyQt5 import QtWidgets as qtw
-from PyQt5 import QtCore as qtc
 
 
 class View(qtw.QWidget):
@@ -14,8 +13,6 @@ class View(qtw.QWidget):
 
 if __name__ == "__main__":
     app = qtw.QApplication([])
-
     widget = View()
     widget.show()
-
     app.exec_()

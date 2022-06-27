@@ -19,8 +19,6 @@ __author__ = "klaus.moser"
 
 
 app = qtw.QApplication([])
-
 widget = View()
 widget.show()
-
 app.exec_()
